@@ -1,0 +1,27 @@
+[
+    {
+      "type": "tab",
+      "label": "i18n.Configuration",
+      "sections": [
+        {
+          "label": "i18n.Spacer",
+          "settings": [
+            {
+              "type": "range",
+              "id": "spacer-size",
+              "default": 50,
+              "typeMeta": {
+                "rangeValues": {
+                  "min": 0,
+                  "max": 200,
+                  "step": 1,
+                  "unit": "px"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  

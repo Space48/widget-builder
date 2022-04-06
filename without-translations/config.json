@@ -1,0 +1,50 @@
+{
+  "content": "I am a sample text",
+  "color": "#FFFFFF",
+  "background_color": "#3C1F8C",
+  "font_size": {
+    "value": 24,
+    "type": "px"
+  },
+  "font_weight": "500",
+  "text_align": {
+    "horizontal": "center",
+    "vertical": "middle"
+  },
+  "margin": {
+    "top": {
+      "value": "0",
+      "type": "px"
+    },
+    "right": {
+      "value": "0",
+      "type": "px"
+    },
+    "bottom": {
+      "value": "0",
+      "type": "px"
+    },
+    "left": {
+      "value": "0",
+      "type": "px"
+    }
+  },
+  "padding": {
+    "top": {
+      "value": "8",
+      "type": "px"
+    },
+    "right": {
+      "value": "24",
+      "type": "px"
+    },
+    "bottom": {
+      "value": "8",
+      "type": "px"
+    },
+    "left": {
+      "value": "24",
+      "type": "px"
+    }
+  }
+}

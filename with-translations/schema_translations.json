@@ -1,0 +1,8 @@
+{
+    "i18n.Configuration": {
+        "default": "Configuration"
+    },
+    "i18n.Spacer": {
+        "default": "Spacer"
+    }
+}
