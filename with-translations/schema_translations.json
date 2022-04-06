@@ -3,6 +3,8 @@
         "default": "Configuration"
     },
     "i18n.Spacer": {
-        "default": "Spacer"
+        "default": "Spacer",
+        "fr-FR": "Entretoise",
+        "de-DE": "Abstandshalter"
     }
 }
