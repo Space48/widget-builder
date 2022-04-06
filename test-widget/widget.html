@@ -1,0 +1,17 @@
+<div id="bc-product-list-{{_.id}}"></div>
+
+<ul>
+{{#each products as |product|}}
+    {{#each ../_.data.site.products.edges as |productResource|}}
+        {{#if productResource.node.entityId "==" product.productId}}
+        <li>
+            Name: {{productResource.node.name}}
+            Sash: 
+            {{#each productResource.node.customFields.edges as |field|}}
+                {{field.node.value}}
+            {{/each}}
+        </li>
+        {{/if}}
+    {{/each}}
+{{/each}}
+</ul>

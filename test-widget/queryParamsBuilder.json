@@ -1,0 +1,10 @@
+{
+    "productIds": {
+        "reads": "products.*.productId",
+        "type": "Int!"
+    },
+    "productId": {
+        "reads": "productId",
+        "type": "Int!"
+    }
+}

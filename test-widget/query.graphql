@@ -1,0 +1,46 @@
+query ProductList($productIds: [Int!], $activeCurrencyCode: currencyCode) {
+    site {
+        settings {
+            storeName
+        }
+        products(entityIds: $productIds) {
+            edges {
+                node {
+                    name
+                    entityId
+                    addToCartUrl
+                    addToWishlistUrl
+                    path
+                    sku
+                    prices(includeTax: true, currencyCode: $activeCurrencyCode) { 
+                        price { currencyCode value } 
+                        priceRange { min { value } max { value } } 
+                        salePrice { value }
+                    }
+                    reviewSummary {
+                        summationOfRatings
+                        numberOfReviews
+                    }
+                    defaultImage {
+                        url960wide: url(width: 960)
+                    }
+                    variants(first: 25) { 
+                        edges { 
+                            node { sku } 
+                        } 
+                    }
+                    variants(first: 25) { 
+                        edges { 
+                            node { sku } 
+                        } 
+                    }
+                    customFields(names: ["sash"], first: 5) { 
+                        edges { 
+                            node { name value } 
+                        } 
+                    }
+                }
+            }
+        }
+    }
+}
