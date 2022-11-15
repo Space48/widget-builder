@@ -4,9 +4,11 @@ import queryParamsLoader from '../query/queryParamsLoader/queryParamsLoader';
 import { publishWidget, getWidgetTemplate } from '../api/widget';
 import WidgetFileType, { FileLoaderResponse } from '../../types';
 import schemaLoader from '../schema/schemaLoader/schemaLoader';
+import { channelId } from '../../config';
+import translationsLoader from '../translation/translationLoader/translationLoader';
 
 import widgetTemplateLoader from './widgetTemplateLoader/widgetTemplateLoader';
-import translationsLoader from '../translation/translationLoader/translationLoader';
+
 
 interface CreateWidgetTemplateReq {
     name: string;
@@ -22,8 +24,8 @@ const widgetTemplatePayload = (widgetName: string): CreateWidgetTemplateReq => (
     schema: [],
     template: '',
     storefront_api_query: '',
-    channel_id: 1,
-    schema_translations: ''
+    channel_id: channelId,
+    schema_translations: '',
 });
 
 const publishWidgetTemplate = async (widgetName: string, widgetTemplateDir: string) => {

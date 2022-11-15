@@ -6,9 +6,8 @@ import widgetTemplateLoader from '../widgetTemplate/widgetTemplateLoader/widgetT
 import widgetConfigLoader from '../widgetConfig/widgetConfigLoader/widgetConfigLoader';
 import queryLoader from '../query/queryLoader/queryLoader';
 import queryParamsLoader from '../query/queryParamsLoader/queryParamsLoader';
+import { channelId } from '../../config';
 import translationsLoader from '../translation/translationLoader/translationLoader';
-
-const channelId = process.env.WIDGET_BUILDER_CHANNEL_ID ? parseInt(process.env.WIDGET_BUILDER_CHANNEL_ID, 10) : 1;
 
 const getInitialRenderingPayload = (): WidgetPreviewRenderRequest => ({
     widget_configuration: {},
