@@ -1,4 +1,4 @@
-import AUTH_CONFIG from '../auth/authConfig';
+import { AUTH_CONFIG } from '../auth/authConfig';
 
 import { widgetApi } from './widget';
 

@@ -6,7 +6,7 @@ import widgetTemplateLoader from '../widgetTemplate/widgetTemplateLoader/widgetT
 import widgetConfigLoader from '../widgetConfig/widgetConfigLoader/widgetConfigLoader';
 import queryLoader from '../query/queryLoader/queryLoader';
 import queryParamsLoader from '../query/queryParamsLoader/queryParamsLoader';
-import { channelId } from '../../config';
+import { CHANNEL_ID } from '../../services/auth/authConfig';
 import translationsLoader from '../translation/translationLoader/translationLoader';
 
 const getInitialRenderingPayload = (): WidgetPreviewRenderRequest => ({
@@ -16,7 +16,7 @@ const getInitialRenderingPayload = (): WidgetPreviewRenderRequest => ({
     widget_uuid: uuid(),
     storefront_api_query: '',
     storefront_api_query_params: {},
-    channel_id: channelId,
+    channel_id: CHANNEL_ID,
     schema_translations: '',
 });
 

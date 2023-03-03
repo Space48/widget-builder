@@ -6,7 +6,7 @@ import { Command } from 'commander';
 
 import startWidgetBuilder from '../../server';
 import checkCredentials from '../../services/auth/checkAuth';
-import AUTH_CONFIG from '../../services/auth/authConfig';
+import { AUTH_CONFIG } from '../../services/auth/authConfig';
 
 const startCommand = () => {
     const program = new Command('start');
