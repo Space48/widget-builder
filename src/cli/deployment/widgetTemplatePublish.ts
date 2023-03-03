@@ -8,7 +8,7 @@ import { Command } from 'commander';
 import publishWidgetTemplate from '../../services/widgetTemplate/publish';
 import { log, messages } from '../../messages';
 import checkCredentials from '../../services/auth/checkAuth';
-import AUTH_CONFIG from '../../services/auth/authConfig';
+import { AUTH_CONFIG } from '../../services/auth/authConfig';
 
 const widgetTemplatePublish = () => {
     const program = new Command('publish');

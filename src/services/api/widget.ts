@@ -1,6 +1,6 @@
 import Axios, { AxiosResponse } from 'axios';
 
-import AUTH_CONFIG from '../auth/authConfig';
+import { AUTH_CONFIG, CHANNEL_ID } from '../auth/authConfig';
 import { WidgetConfiguration } from '../schema/schemaParser/schemaParser';
 
 export const widgetApi = {
@@ -69,13 +69,13 @@ export const publishWidget = (
 
 export const getWidgetTemplate = (
     name: string
-): Promise<string> => new Promise((resolve, reject) => 
+): Promise<string> => new Promise((resolve, reject) =>
     getAllTemplates()
         .then((data) => {
             const match = data.find(
                 template => name === template.name,
-              );
-            
+            );
+
             resolve(match?.uuid || '');
         })
         .catch(error => reject(error)))
@@ -91,7 +91,7 @@ export interface WidgetTemplateResult {
     date_modified: string;
     current_version_uuid: string;
     icon_name: string;
-  }
+}
 
 const getAllTemplates = async (page: number = 1): Promise<WidgetTemplateResult[]> => {
     let listResults: WidgetTemplateResult[] = [];
@@ -105,7 +105,7 @@ const getAllTemplates = async (page: number = 1): Promise<WidgetTemplateResult[]
                 'X-Auth-Client': AUTH_CONFIG.authId,
                 'X-Auth-Token': AUTH_CONFIG.authToken,
             },
-            url: `${widgetApi.widgetTemplateList}?limit=250&page=${page}`,
+            url: `${widgetApi.widgetTemplateList}?limit=250&page=${page}&channel_id:in=${CHANNEL_ID}`,
         })).data;
 
         done = data.length === 0;

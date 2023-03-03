@@ -4,7 +4,7 @@ import queryParamsLoader from '../query/queryParamsLoader/queryParamsLoader';
 import { publishWidget, getWidgetTemplate } from '../api/widget';
 import WidgetFileType, { FileLoaderResponse } from '../../types';
 import schemaLoader from '../schema/schemaLoader/schemaLoader';
-import { channelId } from '../../config';
+import { CHANNEL_ID } from '../../services/auth/authConfig';
 import translationsLoader from '../translation/translationLoader/translationLoader';
 
 import widgetTemplateLoader from './widgetTemplateLoader/widgetTemplateLoader';
@@ -24,7 +24,7 @@ const widgetTemplatePayload = (widgetName: string): CreateWidgetTemplateReq => (
     schema: [],
     template: '',
     storefront_api_query: '',
-    channel_id: channelId,
+    channel_id: CHANNEL_ID,
     schema_translations: '',
 });
 

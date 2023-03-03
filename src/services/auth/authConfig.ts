@@ -8,10 +8,10 @@ export interface AuthConfig {
     authToken: string;
 }
 
-const AUTH_CONFIG: AuthConfig = {
+export const AUTH_CONFIG: AuthConfig = {
     authId: process.env.WIDGET_BUILDER_AUTH_ID || '',
     apiPath: process.env.WIDGET_BUILDER_API_GATEWAY_BASE || '',
     authToken: process.env.WIDGET_BUILDER_AUTH_TOKEN || '',
 };
 
-export default AUTH_CONFIG;
+export const CHANNEL_ID = process.env.WIDGET_BUILDER_CHANNEL_ID ? parseInt(process.env.WIDGET_BUILDER_CHANNEL_ID, 10) : 1;
