@@ -1,4 +1,4 @@
-import uuid from 'uuid';
+import { v4 as uuid } from 'uuid';
 
 import { getWidget, WidgetPreviewRenderRequest } from '../api/widget';
 import WidgetFileType, { FileLoaderResponse } from '../../types';
@@ -6,7 +6,7 @@ import widgetTemplateLoader from '../widgetTemplate/widgetTemplateLoader/widgetT
 import widgetConfigLoader from '../widgetConfig/widgetConfigLoader/widgetConfigLoader';
 import queryLoader from '../query/queryLoader/queryLoader';
 import queryParamsLoader from '../query/queryParamsLoader/queryParamsLoader';
-import { CHANNEL_ID } from '../../services/auth/authConfig';
+import { CHANNEL_ID } from '../auth/authConfig';
 import translationsLoader from '../translation/translationLoader/translationLoader';
 
 const getInitialRenderingPayload = (): WidgetPreviewRenderRequest => ({

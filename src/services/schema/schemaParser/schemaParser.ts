@@ -62,7 +62,7 @@ export interface ArraySchemaElement {
     defaultCount?: number;
     entryLabel: string;
     thumbnail?: Thumbnail;
-    schema: (TabSchemaElement|ArraySchemaElement)[];
+    schema: (TabSchemaElement | ArraySchemaElement)[];
 }
 
 export interface HiddenSchemaElement {
@@ -180,7 +180,7 @@ export interface WidgetTemplateEntry {
     icon_name: string;
     uuid: string;
     name: string;
-    schema: (TabSchemaElement|ArraySchemaElement)[];
+    schema: (TabSchemaElement | ArraySchemaElement)[];
     template: string;
     kind: string;
     storefront_api_query: string;
@@ -228,15 +228,15 @@ function parseConditionalDefaults(selectOptions: ConditionalSettingsValue[]) {
 }
 
 function parseElementDefaults(controls: ElementControlType) {
-    const elementConfigurations = {};
-    Object.keys(controls).forEach((control) => {
+    const elementConfigurations: { [key: string]: string } = {};
+    Object.keys(controls).forEach((control: keyof ElementControlType) => {
         const content = controls[control];
-        if (content && content.settings) {
+        if (content && 'settings' in content) {
             content.settings.forEach((setting: BaseSchemaSetting) => {
                 elementConfigurations[setting.id] = setting.default;
             });
         } else {
-            elementConfigurations[control] = content.default;
+            elementConfigurations[control] = content?.default || '';
         }
     });
 
@@ -351,7 +351,7 @@ export function parseArraySchemaDefaults(arraySchemaElement: ArraySchemaElement)
     return configuration;
 }
 
-export function generateWidgetConfiguration(schema: (TabSchemaElement|ArraySchemaElement|HiddenSchemaElement)[]) {
+export function generateWidgetConfiguration(schema: (TabSchemaElement | ArraySchemaElement | HiddenSchemaElement)[]) {
     let configuration: WidgetConfiguration = {};
     schema.forEach((schemaElement: SchemaElement) => {
         if (schemaElement.type === SchemaElementType.TAB) {
