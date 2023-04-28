@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`generateWidgetConfiguration correctly generates a widget configuration 1`] = `
-Object {
+{
   "animationDuration": "400",
   "buttonActionType": "addToCart",
   "buttonBorderColor": "rgba(102,102,102,1);",
@@ -25,41 +25,41 @@ Object {
   "easingMethod": "ease",
   "productCardBackgroundColor": "rgba(255,255,255,1)",
   "productCardBorderColor": "#D9DCE9",
-  "productCardContentAlignment": Object {
+  "productCardContentAlignment": {
     "horizontal": "center",
   },
-  "productCardMargin": Object {
-    "bottom": Object {
+  "productCardMargin": {
+    "bottom": {
       "type": "px",
       "value": "0",
     },
-    "left": Object {
+    "left": {
       "type": "px",
       "value": "10.5",
     },
-    "right": Object {
+    "right": {
       "type": "px",
       "value": "10.5",
     },
-    "top": Object {
+    "top": {
       "type": "px",
       "value": "0",
     },
   },
-  "productCardPadding": Object {
-    "bottom": Object {
+  "productCardPadding": {
+    "bottom": {
       "type": "px",
       "value": "16",
     },
-    "left": Object {
+    "left": {
       "type": "px",
       "value": "0",
     },
-    "right": Object {
+    "right": {
       "type": "px",
       "value": "0",
     },
-    "top": Object {
+    "top": {
       "type": "px",
       "value": "0",
     },
@@ -87,23 +87,23 @@ Object {
   "productRatingStarColorEmpty": "#D9DCE9",
   "productRatingStarColorFull": "#80000B",
   "productRatingsTextColor": "#8C93AD",
-  "products": Array [
-    Object {
-      "productImageAlignment": Object {
+  "products": [
+    {
+      "productImageAlignment": {
         "horizontal": "center",
         "vertical": "middle",
       },
       "productImageFit": "fit",
     },
-    Object {
-      "productImageAlignment": Object {
+    {
+      "productImageAlignment": {
         "horizontal": "center",
         "vertical": "middle",
       },
       "productImageFit": "fit",
     },
-    Object {
-      "productImageAlignment": Object {
+    {
+      "productImageAlignment": {
         "horizontal": "center",
         "vertical": "middle",
       },

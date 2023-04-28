@@ -31,7 +31,7 @@ export default class QueryParamFactory {
     }
 
     build(): StorefrontApiQueryParams {
-        const result = {};
+        const result: any = {};
         Object.keys(this.queryParamBuilder).forEach((query) => {
             const data = this.queryParamBuilder[query];
             const dataToRead = data.reads;
@@ -99,16 +99,16 @@ export default class QueryParamFactory {
         }
 
         switch (pureDataType) {
-        case 'Boolean':
-            return !!dataToRead;
-        case 'Float':
-            return parseFloat(dataToRead);
-        case 'Int':
-            return parseInt(dataToRead, 10);
-        case 'String':
-            return typeof dataToRead === 'string' ? dataToRead : JSON.stringify(dataToRead);
-        default:
-            return dataToRead;
+            case 'Boolean':
+                return !!dataToRead;
+            case 'Float':
+                return parseFloat(dataToRead);
+            case 'Int':
+                return parseInt(dataToRead, 10);
+            case 'String':
+                return typeof dataToRead === 'string' ? dataToRead : JSON.stringify(dataToRead);
+            default:
+                return dataToRead;
         }
     }
 

@@ -8,7 +8,7 @@ import QueryParamFactory from './queryParamsWriter/queryParamFactory';
 import queryParamsWriter from './queryParamsWriter/queryParamsWriter';
 
 export default function generateQueryParams(directory: string) {
-    return new Promise((resolve) => {
+    return new Promise<void>((resolve) => {
         Promise.all([
             queryLoader(directory),
             queryParamsBuilderLoader(directory),
