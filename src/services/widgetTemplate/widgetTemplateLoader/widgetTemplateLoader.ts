@@ -1,7 +1,6 @@
 import * as fs from 'fs';
 
 import WidgetFileType, { FileLoaderResponse } from '../../../types';
-import { messages } from '../../../messages';
 
 export default function widgetTemplateLoader(widgetDir: string): Promise<FileLoaderResponse> {
     return new Promise((resolve, reject) => {
@@ -10,7 +9,7 @@ export default function widgetTemplateLoader(widgetDir: string): Promise<FileLoa
             'utf8',
             (err: Error, data: string) => {
                 if (!data || err) {
-                    reject(messages.invalidWidgetTemplate());
+                    reject(err);
                 }
 
                 resolve({ type: WidgetFileType.TEMPLATE, data });
