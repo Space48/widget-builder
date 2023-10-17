@@ -69,7 +69,8 @@ const publishWidgetTemplate = async (widgetName: string, widgetTemplateDir: stri
         } else {
             log.success(`Successfully updated ${widgetName}`);
         }
-    } catch {
+    } catch (e) {
+        log.error(e);
         log.error(messages.widgetRelease.failure);
     }
 };
