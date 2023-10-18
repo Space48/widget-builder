@@ -28,6 +28,8 @@ const widgetTemplatePublish = () => {
                 return;
             }
 
+            log.info(`Template directory: ${widgetTemplateDir}`);
+
             if (!existsSync(widgetTemplateDir)) {
                 log.error('Widget Template doesn\'t exist');
                 return;
