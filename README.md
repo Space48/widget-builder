@@ -1,4 +1,4 @@
-# Widget Builder [![CircleCi](https://circleci.com/gh/bigcommerce/widget-builder.svg?style=svg&circle-token=b4d4a370c5cdee3585da202fd0e81a9febbb6059)](https://circleci.com/gh/bigcommerce/widget-builder)
+# Widget Builder
 
 <div class="otp" id="no-index">
 
@@ -20,8 +20,7 @@ This article contains detailed instructions on how to get started with Widget Bu
 
 ## Prerequisites
 
-* Node.js 14
-* npm 6.14
+* Node.js 18
 * [A BigCommerce store](https://support.bigcommerce.com/s/article/Starting-a-Bigcommerce-Trial).
 * API `access_token` with `content modify` scope. For information on how to generate store API credentials, see [Obtaining store API credentials](https://developer.bigcommerce.com/api-docs/getting-started/authentication/rest-api-authentication#obtaining-store-api-credentials).
 
@@ -50,10 +49,6 @@ Usage: widget-builder [options] [command]
 
 Options:
   -V, --version                  output the version number
-  --gen-config                   generate a config.json file
-  --gen-query-params             generate a queryParams.json file
-  --auto-open <flag>             open browser automatically to the builder
-                                 preview (default: "true")
   -h, --help                     display help for command
 
 Commands:
@@ -65,18 +60,6 @@ Commands:
                                  belonging to the env config
   help [command]                 display help for command
 ```
-
-<div class="HubBlock--callout">
-<div class="CalloutBlock--info">
-<div class="HubBlock-content">
-
-<!-- theme: info -->
-
-> Refer to [Widget Builder README.MD](https://github.com/bigcommerce/widget-builder) for the latest supported `node` version.
-
-</div>
-</div>
-</div>
 
 ## Configuring Widget Builder
 
@@ -90,24 +73,7 @@ widget-builder init
 
 When prompted, enter your API account credentials. This will create the `.env` file with the necessary parameter assignments.
 
-**Sample output:**
 
-```shell
-Thank you for using Widget Builder
-
-            
-This guide will help you get your environment set up.
-
-Before continuing, please make sure you've created or received a Store API account.
-You'll need those credentials in order to generate the appropriate configurations.
-You can find more information here. https://support.bigcommerce.com/s/article/Store-API-Accounts#creating
-
-? Are you ready to continue? You may press any key to continue Yes
-? What is the Client ID? xxxxxxxxxxxxx
-? What is the Access Token? xxxxxxxxxxxxx
-? What is the API Path? https://api.bigcommerce.com/stores/xxxxx/v3/
-[2021-09-08T15:12:40.271Z] Successfully created your configuration, you're all set!
-```
 ### Resetting configurations
 
 If you need to reset the configurations, run the `widget-builder init` command to overwrite the existing assignments.
@@ -149,29 +115,4 @@ To publish a widget to your BigCommerce store, run the following command:
 ```shell
 widget-builder publish [path to widget template]
 ```
-
-## Contributions
-
-If you wish to contribute, please refer to our [contribution guide](CONTRIBUTING.md)
-and [code of conduct](CODE_OF_CONDUCT.md) for this project.
-
-## Issues / Bugs
-
-* Please include a clear, specific title and replicable description.
-
-* Please include your environment, OS, and any exceptions/backtraces that occur. The more
-information that is given, the more likely we can debug and fix the issue.
-
-**If you find a security bug, please do not post as an issue. Send directly to [security@bigcommerce.com](mailto:security@bigcommerce.com)
-instead.**
-
-Thank you again for your interest in contributing to the Widget Builder!
-
-Copyright (C) 2019-Present BigCommerce Inc. All rights reserved.
-
-## Resources
-
-* [Authenticating BigCommerce's REST APIs](https://developer.bigcommerce.com/api-docs/getting-started/authentication/rest-api-authentication)
-* [Widgets API Overview](https://developer.bigcommerce.com/api-docs/store-management/widgets/overview)
-* [Widget Builder GitHub repository](https://github.com/bigcommerce/widget-builder)
 
