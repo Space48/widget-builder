@@ -10,6 +10,7 @@
     "allowJs": true,
     "jsx": "react",
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
