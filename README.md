@@ -20,7 +20,7 @@ This article contains detailed instructions on how to get started with Widget Bu
 
 ## Prerequisites
 
-* Node.js 20.18
+* Node.js 20.19
 * [A BigCommerce store](https://support.bigcommerce.com/s/article/Starting-a-Bigcommerce-Trial).
 * API `access_token` with `content modify` scope. For information on how to generate store API credentials, see [Obtaining store API credentials](https://developer.bigcommerce.com/api-docs/getting-started/authentication/rest-api-authentication#obtaining-store-api-credentials).
 
